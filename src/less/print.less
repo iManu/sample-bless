@@ -1,0 +1,44 @@
+/**
+ * print.less
+ */
+* {
+	background-image: none !important;
+	text-align: left !important;
+	&:before,
+	&:after {
+		background-image: none !important;
+	}
+}
+*, html, body {
+	background-color: white !important;
+	color: black !important;
+	font-family: serif;
+	font-size: 14pt !important;
+}
+h1, h2, h3 {
+	font-size: 20pt !important;
+}
+h4, h5, h6 {
+	font-size: 16pt !important;
+}
+a {
+	text-decoration: underline;
+}
+a:link:after, #content a:visited:after {
+	text-transform: lowercase;
+	content: " (" attr(href) ") ";
+	font-size: 90%;
+}
+a[href^="/"]:after {
+	text-transform: lowercase;
+	display: block;
+	white-space: normal;
+	word-break: break-all;
+	content: " (http://www.online.net" attr(href) ") ";
+}
+#skip,
+#header,
+#footer,
+.visible--palm {
+	display: none;
+}
